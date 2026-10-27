@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ya2jd05m5ime"]
+
+[ext_resource type="Script" uid="uid://c7guymf3wugj4" path="res://scripts/collectible.gd" id="1_bkg8t"]
+[ext_resource type="Texture2D" uid="uid://b5vby80hmw3t5" path="res://Assets/collactable items/coin.png" id="2_1pg6c"]
+[ext_resource type="AudioStream" uid="uid://s6y2fmu8kksj" path="res://Assets/Soundtracks/retro-coin-3-236679.wav" id="2_61c27"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
+radius = 5.0990195
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
+radius = 8.0
+
+[node name="Collectible" type="CharacterBody2D" unique_id=510776456]
+z_index = 110
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_bkg8t")
+collect_sfx = ExtResource("2_61c27")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2138069126]
+texture = ExtResource("2_1pg6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=436690485]
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1526371384]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=590742470]
+shape = SubResource("CircleShape2D_8vrlf")
+
+[node name="Timer" type="Timer" parent="." unique_id=1615490931]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_pickup_area_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

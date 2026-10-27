@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c8aqp5bd5wfl1"]
+
+[ext_resource type="Script" uid="uid://csfd3lbswey5j" path="res://scripts/hud.gd" id="1_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://b5vby80hmw3t5" path="res://Assets/collactable items/coin.png" id="2_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://ckmdpy4igcvmr" path="res://Assets/collactable items/medic.png" id="3_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://q1204yngrh0w" path="res://Assets/Hud/health bar.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://sk5pdgxie8p8" path="res://Assets/Hud/health2.png" id="5_047uy"]
+[ext_resource type="Shader" uid="uid://6jq4fwx7r85l" path="res://scripts/hud.gdshader" id="6_047uy"]
+[ext_resource type="Script" uid="uid://c7e4u15s1ppb6" path="res://scripts/vignette.gd" id="7_5pdws"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vrlf"]
+shader = ExtResource("6_047uy")
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/opacity = 0.0
+
+[node name="HUD" type="CanvasLayer" unique_id=217826705]
+script = ExtResource("1_5ysmq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=961538230]
+offset_left = 276.0
+offset_top = 7.0
+offset_right = 316.0
+offset_bottom = 47.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=831446078]
+layout_mode = 2
+texture = ExtResource("2_6fi6k")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=136601683]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1608778300]
+offset_left = 175.0
+offset_top = 6.0
+offset_right = 220.0
+offset_bottom = 46.0
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer2" unique_id=1198445541]
+layout_mode = 2
+texture = ExtResource("3_uo2fv")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2" unique_id=355497294]
+layout_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=728697453]
+offset_left = 4.0
+offset_top = 12.0
+offset_right = 52.0
+offset_bottom = 52.0
+scale = Vector2(3, 3)
+texture_under = ExtResource("4_uo2fv")
+
+[node name="health_bar" type="TextureProgressBar" parent="." unique_id=572094091]
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 54.0
+offset_bottom = 58.0
+scale = Vector2(3, 3)
+texture_progress = ExtResource("5_047uy")
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=1834093189 groups=["vignette"]]
+material = SubResource("ShaderMaterial_8vrlf")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("7_5pdws")

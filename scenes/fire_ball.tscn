@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dpnpoo3qyvkts"]
+
+[ext_resource type="Texture2D" uid="uid://dqlx5qetnqn8t" path="res://Assets/Enemies/AcidSpitter/Attack/Acid-Sheet.png" id="1_51gij"]
+[ext_resource type="Script" uid="uid://b1kadye50ll02" path="res://scripts/fire_ball/fire_ball.gd" id="1_qddq2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qddq2"]
+atlas = ExtResource("1_51gij")
+region = Rect2(0, 0, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_une7w"]
+atlas = ExtResource("1_51gij")
+region = Rect2(32, 0, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggq3o"]
+atlas = ExtResource("1_51gij")
+region = Rect2(64, 0, 32, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qddq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_une7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggq3o")
+}],
+"loop": 1,
+"name": &"fire_ball",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
+radius = 7.071068
+
+[node name="fire_ball" type="Area2D" unique_id=309661306]
+script = ExtResource("1_qddq2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=240550060]
+sprite_frames = SubResource("SpriteFrames_1vivr")
+animation = &"fire_ball"
+autoplay = "fire_ball"
+frame = 2
+frame_progress = 0.30969256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=777308417]
+shape = SubResource("CircleShape2D_8vrlf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

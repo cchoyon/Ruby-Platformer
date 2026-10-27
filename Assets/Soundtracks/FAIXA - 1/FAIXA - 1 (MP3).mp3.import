@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3sctdg5qc433"
+path="res://.godot/imported/FAIXA - 1 (MP3).mp3-689a3888f320242c37dccc775e6c9fcf.mp3str"
+
+[deps]
+
+source_file="res://Ancient Forest 1.6/Soundtracks/FAIXA - 1/FAIXA - 1 (MP3).mp3"
+dest_files=["res://.godot/imported/FAIXA - 1 (MP3).mp3-689a3888f320242c37dccc775e6c9fcf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://421pf7vqfqw8"
+path="res://.godot/imported/FAIXA - 4 (OGG).ogg-cf71ad445cd38e510874738747a9c33c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Soundtracks/FAIXA - 4/FAIXA - 4 (OGG).ogg"
+dest_files=["res://.godot/imported/FAIXA - 4 (OGG).ogg-cf71ad445cd38e510874738747a9c33c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

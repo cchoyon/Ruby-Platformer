@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dqp10b5elyiei"]
+
+[ext_resource type="PackedScene" uid="uid://m2wmwrnym0ow" path="res://scenes/map.tscn" id="1_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://bllb7fjhg7hd4" path="res://scenes/dragon.tscn" id="1_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://dpgkxa74cryi8" path="res://scenes/ruby.tscn" id="2_k0juu"]
+[ext_resource type="PackedScene" uid="uid://bso6ufsg4ebab" path="res://scenes/portal.tscn" id="3_71j4m"]
+[ext_resource type="Script" uid="uid://njck5n6naa1r" path="res://scripts/portal_open_area.gd" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://6bi2ejy6e6q0" path="res://scenes/background1.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://bvh6my5dj0qhk" path="res://scenes/boar.tscn" id="6_i7141"]
+[ext_resource type="PackedScene" uid="uid://cblv8dekbn3dg" path="res://scenes/green_slime.tscn" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://b2myxye855yop" path="res://scenes/mushroom.tscn" id="8_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://bkenvp86t4buo" path="res://scenes/priest.tscn" id="9_7r4gi"]
+[ext_resource type="PackedScene" uid="uid://dx2wdjt0p50c7" path="res://scenes/snail.tscn" id="11_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://p0yrhfyr3xmv" path="res://scenes/martial_hero.tscn" id="12_q5onr"]
+[ext_resource type="PackedScene" uid="uid://ya2jd05m5ime" path="res://scenes/collectible.tscn" id="13_jhx03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(171, 70)
+
+[node name="World" type="Node2D" unique_id=695796292]
+
+[node name="dragon" parent="." unique_id=1373555346 instance=ExtResource("1_w7kh3")]
+position = Vector2(3977, 49)
+
+[node name="dragon2" parent="." unique_id=2130305777 instance=ExtResource("1_w7kh3")]
+position = Vector2(6151, 250)
+
+[node name="Node2D" parent="." unique_id=908295945 instance=ExtResource("1_4wyf3")]
+position = Vector2(0, 364)
+
+[node name="green_slime" parent="." unique_id=17938965 instance=ExtResource("6_qfnet")]
+position = Vector2(2092, 485.99997)
+
+[node name="boar" parent="." unique_id=1121485784 instance=ExtResource("6_i7141")]
+position = Vector2(1665, 389)
+
+[node name="mushroom" parent="." unique_id=1271866126 instance=ExtResource("8_4mrxx")]
+position = Vector2(2916, -9)
+
+[node name="priest" parent="." unique_id=523662496 instance=ExtResource("9_7r4gi")]
+position = Vector2(4122.0005, 301)
+
+[node name="ruby" parent="." unique_id=1781754423 instance=ExtResource("2_k0juu")]
+position = Vector2(180, 405)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1227336982]
+position = Vector2(2710, -8)
+
+[node name="portal" parent="." unique_id=247970314 node_paths=PackedStringArray("target_marker_path", "portal_visual") instance=ExtResource("3_71j4m")]
+position = Vector2(2786, 236)
+target_marker_path = NodePath("../Marker2D")
+portal_visual = NodePath(".")
+
+[node name="CollisionShape2D" parent="portal" index="1" unique_id=1899163791]
+disabled = true
+
+[node name="portal_open_area" type="Area2D" parent="." unique_id=1633887157 node_paths=PackedStringArray("portal", "portal_collisionShape")]
+position = Vector2(1438, -162)
+script = ExtResource("4_k0juu")
+portal = NodePath("../portal")
+portal_collisionShape = NodePath("../portal/CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal_open_area" unique_id=72753650]
+position = Vector2(1274.5, 391)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="background1" parent="." unique_id=1720321429 instance=ExtResource("5_71j4m")]
+position = Vector2(1042, 224)
+
+[node name="snail" parent="." unique_id=1287514000 instance=ExtResource("11_e3hyu")]
+position = Vector2(4315, 8)
+
+[node name="boar2" parent="." unique_id=935952424 instance=ExtResource("6_i7141")]
+position = Vector2(7388, 248)
+
+[node name="martial_hero" parent="." unique_id=1496871743 instance=ExtResource("12_q5onr")]
+position = Vector2(7089, 525)
+
+[node name="Collectable items" type="Node2D" parent="." unique_id=1444838924]
+
+[node name="coin" parent="Collectable items" unique_id=510776456 instance=ExtResource("13_jhx03")]
+position = Vector2(2096, 377)
+
+[node name="coin2" parent="Collectable items" unique_id=1521857121 instance=ExtResource("13_jhx03")]
+position = Vector2(3349, 110)
+
+[node name="medic" parent="Collectable items" unique_id=1010371124 instance=ExtResource("13_jhx03")]
+position = Vector2(5037, 254)
+item_type = "medic"
+
+[node name="medic2" parent="Collectable items" unique_id=511113536 instance=ExtResource("13_jhx03")]
+position = Vector2(7746, 296)
+item_type = "medic"
+
+[node name="coin3" parent="Collectable items" unique_id=1385629792 instance=ExtResource("13_jhx03")]
+position = Vector2(6490, 147)
+
+[node name="coin4" parent="Collectable items" unique_id=409913806 instance=ExtResource("13_jhx03")]
+position = Vector2(6513, 147)
+
+[node name="coin5" parent="Collectable items" unique_id=445278500 instance=ExtResource("13_jhx03")]
+position = Vector2(6626, 159)
+
+[node name="coin6" parent="Collectable items" unique_id=705258834 instance=ExtResource("13_jhx03")]
+position = Vector2(6647, 158)
+
+[node name="coin7" parent="Collectable items" unique_id=1777267771 instance=ExtResource("13_jhx03")]
+position = Vector2(6647, 158)
+
+[node name="coin8" parent="Collectable items" unique_id=1265432456 instance=ExtResource("13_jhx03")]
+position = Vector2(6668, 158)
+
+[node name="coin9" parent="Collectable items" unique_id=532769360 instance=ExtResource("13_jhx03")]
+position = Vector2(6691, 158)
+
+[node name="coin10" parent="Collectable items" unique_id=1403570074 instance=ExtResource("13_jhx03")]
+position = Vector2(6712, 157)
+
+[node name="coin11" parent="Collectable items" unique_id=609468749 instance=ExtResource("13_jhx03")]
+position = Vector2(6990, 182)
+
+[connection signal="body_entered" from="portal_open_area" to="portal_open_area" method="_on_body_entered"]
+[connection signal="body_exited" from="portal_open_area" to="portal_open_area" method="_on_body_exited"]
+
+[editable path="portal"]

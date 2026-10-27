@@ -1,0 +1,278 @@
+[gd_scene format=3 uid="uid://bkenvp86t4buo"]
+
+[ext_resource type="Texture2D" uid="uid://cvrvhec1i5bs5" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_attack_1.png" id="1_7ydb7"]
+[ext_resource type="Script" uid="uid://3jxg406x3owm" path="res://scripts/priest/priest.gd" id="1_tuf2f"]
+[ext_resource type="Texture2D" uid="uid://cvt0v8io8pwr5" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_attack_2.png" id="2_c87uv"]
+[ext_resource type="AudioStream" uid="uid://dxcnkhq6nsdb3" path="res://Assets/Soundtracks/driken5482-retro-hurt-1-236672.wav" id="2_dh2s6"]
+[ext_resource type="Texture2D" uid="uid://m6n8sldilfm2" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_attack_3.png" id="3_64lvq"]
+[ext_resource type="Texture2D" uid="uid://cqhwfhyogcodr" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_attack_4.png" id="4_cnu8c"]
+[ext_resource type="Texture2D" uid="uid://4dm1t3pk70so" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_attack_5.png" id="5_08c06"]
+[ext_resource type="Texture2D" uid="uid://c72h5myeityxv" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_1.png" id="6_l14aa"]
+[ext_resource type="Texture2D" uid="uid://cyjgkkji73d8" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_2.png" id="7_qmi8a"]
+[ext_resource type="Texture2D" uid="uid://cfue7ubnjb8oq" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_3.png" id="8_mhfft"]
+[ext_resource type="Texture2D" uid="uid://dfptmikoy07ht" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_4.png" id="9_tuf2f"]
+[ext_resource type="Texture2D" uid="uid://du2nbxvyxpew4" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_5.png" id="10_eb32a"]
+[ext_resource type="Texture2D" uid="uid://cg6r2mfob362x" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_die_6.png" id="11_dh2s6"]
+[ext_resource type="Texture2D" uid="uid://56mhk54x5mkj" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_takehit_1.png" id="12_50t6q"]
+[ext_resource type="Texture2D" uid="uid://cr0emvsdycxmw" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_takehit_2.png" id="13_up8ul"]
+[ext_resource type="Texture2D" uid="uid://cdj6cfh2gmvjk" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_takehit_3.png" id="14_614qi"]
+[ext_resource type="Texture2D" uid="uid://dlvoaulq8vsf4" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_takehit_4.png" id="15_1ti8o"]
+[ext_resource type="Texture2D" uid="uid://ccidytc516d2n" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_idle_1.png" id="16_8kd5p"]
+[ext_resource type="Texture2D" uid="uid://bl5tqenuroy2f" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_idle_2.png" id="17_g8jty"]
+[ext_resource type="Texture2D" uid="uid://43gjeogfj54r" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_idle_3.png" id="18_qrpqe"]
+[ext_resource type="Texture2D" uid="uid://dtvv5d3n0xlos" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_idle_4.png" id="19_u78vh"]
+[ext_resource type="Texture2D" uid="uid://b0iaekfpi6gsu" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_idle_5.png" id="20_byddv"]
+[ext_resource type="Texture2D" uid="uid://cmhknu6amlyat" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_1.png" id="21_r8p5k"]
+[ext_resource type="Texture2D" uid="uid://bi28hmieyb1x0" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_2.png" id="22_jn5hy"]
+[ext_resource type="Texture2D" uid="uid://bcuc8m8566f7s" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_3.png" id="23_1ter5"]
+[ext_resource type="Texture2D" uid="uid://c2jldf8jq38a3" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_4.png" id="24_kxb2o"]
+[ext_resource type="Texture2D" uid="uid://c7ymvqdwyguu" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_5.png" id="25_ths8r"]
+[ext_resource type="Texture2D" uid="uid://cqlvrmnqrukqx" path="res://Assets/Enemies/cultist_priest_sprite_pack/cultist_priest_walk_6.png" id="26_vyxx1"]
+[ext_resource type="Script" uid="uid://jo71rdr4cyhk" path="res://scripts/priest/state_machine.gd" id="27_c87uv"]
+[ext_resource type="Script" uid="uid://blejdo8ef5hru" path="res://scripts/priest/idle.gd" id="28_64lvq"]
+[ext_resource type="Script" uid="uid://cwdb8kwu2s3fl" path="res://scripts/priest/walk.gd" id="29_cnu8c"]
+[ext_resource type="Script" uid="uid://wdcwi7w2ii3c" path="res://scripts/priest/attack.gd" id="30_08c06"]
+[ext_resource type="Script" uid="uid://vbv3smo11bpk" path="res://scripts/priest/attack_2.gd" id="31_l14aa"]
+[ext_resource type="Script" uid="uid://ve2si5qf2apx" path="res://scripts/priest/attack_cooldown.gd" id="32_eb32a"]
+[ext_resource type="Script" uid="uid://tt7m65bqfwq5" path="res://scripts/priest/hurt.gd" id="32_qmi8a"]
+[ext_resource type="Script" uid="uid://7jvrma0q75y" path="res://scripts/priest/dead.gd" id="33_mhfft"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ydb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c87uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_64lvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cnu8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_08c06")
+}],
+"loop": 0,
+"name": &"attack1",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ydb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c87uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_64lvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cnu8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_08c06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7ydb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c87uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_64lvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cnu8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_08c06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7ydb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c87uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_64lvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cnu8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_08c06")
+}],
+"loop": 0,
+"name": &"attack2",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l14aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qmi8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mhfft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tuf2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eb32a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dh2s6")
+}],
+"loop": 0,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_50t6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_up8ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_614qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1ti8o")
+}],
+"loop": 0,
+"name": &"hit",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_8kd5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g8jty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qrpqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_u78vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_byddv")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_r8p5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jn5hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1ter5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kxb2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ths8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vyxx1")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(691.4289, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+size = Vector2(121.428734, 87)
+
+[node name="priest" type="CharacterBody2D" unique_id=523662496 groups=["enemy", "priest"]]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_tuf2f")
+hurt_sfx = ExtResource("2_dh2s6")
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=2112821202]
+sprite_frames = SubResource("SpriteFrames_1vivr")
+animation = &"attack1"
+frame = 4
+frame_progress = 1.0
+
+[node name="State_Machine" type="Node2D" parent="." unique_id=541061663 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("27_c87uv")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node2D" parent="State_Machine" unique_id=1670446065]
+script = ExtResource("28_64lvq")
+
+[node name="Walk" type="Node2D" parent="State_Machine" unique_id=1546310954]
+script = ExtResource("29_cnu8c")
+
+[node name="Attack1" type="Node2D" parent="State_Machine" unique_id=1797329900]
+script = ExtResource("30_08c06")
+
+[node name="Attack_Cooldown" type="Node2D" parent="State_Machine" unique_id=1292836151]
+script = ExtResource("32_eb32a")
+
+[node name="Timer" type="Timer" parent="State_Machine/Attack_Cooldown" unique_id=23000900]
+wait_time = 0.3
+one_shot = true
+
+[node name="Hurt" type="Node2D" parent="State_Machine" unique_id=1724515043]
+script = ExtResource("32_qmi8a")
+
+[node name="Dead" type="Node2D" parent="State_Machine" unique_id=581429887]
+script = ExtResource("33_mhfft")
+
+[node name="queue_timer" type="Timer" parent="State_Machine/Dead" unique_id=2121986757]
+
+[node name="Attack2" type="Node2D" parent="State_Machine" unique_id=144686932]
+script = ExtResource("31_l14aa")
+
+[node name="player_detection_area" type="Area2D" parent="." unique_id=745737852]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection_area" unique_id=964614352]
+position = Vector2(1.4285986, 2.4999993)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="attack_area" type="Area2D" parent="." unique_id=420224682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=1562120011]
+position = Vector2(-0.7142912, 33.499992)
+scale = Vector2(0.99999857, 0.99999857)
+shape = SubResource("RectangleShape2D_8vrlf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1602330983]
+polygon = PackedVector2Array(-28.571426, 78.57143, 28.571426, 78.57143, 18.571428, -71.428566, 15.714285, -72.85714, 9.999999, -74.28571, 0, -74.28571, -5.7142854, -74.28571, -11.428571, -69.99999, -32.85714, 2.8571427, -32.85714, 77.14285)
+
+[node name="hit_area" type="Area2D" parent="." unique_id=1175948208]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hit_area" unique_id=709562247]
+polygon = PackedVector2Array(-28.571426, 78.57143, 32.85714, 77.14285, 19.999998, -71.428566, 17.142857, -72.85714, 9.999999, -75.71428, 0, -75.71428, -5.7142854, -75.71428, -12.857142, -71.428566, -34.285713, 0, -35.714283, 75.71428, -32.85714, 77.14285)
+
+[connection signal="animation_finished" from="animation" to="State_Machine/Attack1" method="_on_animation_animation_finished"]
+[connection signal="animation_finished" from="animation" to="State_Machine/Attack_Cooldown" method="_on_animation_animation_finished"]
+[connection signal="animation_finished" from="animation" to="State_Machine/Hurt" method="_on_animation_animation_finished"]
+[connection signal="animation_finished" from="animation" to="State_Machine/Dead" method="_on_animation_animation_finished"]
+[connection signal="frame_changed" from="animation" to="State_Machine/Attack1" method="_on_animation_frame_changed"]
+[connection signal="frame_changed" from="animation" to="State_Machine/Attack2" method="_on_animation_frame_changed"]
+[connection signal="timeout" from="State_Machine/Attack_Cooldown/Timer" to="State_Machine/Attack_Cooldown" method="_on_timer_timeout"]
+[connection signal="timeout" from="State_Machine/Dead/queue_timer" to="State_Machine/Dead" method="_on_queue_timer_timeout"]
+[connection signal="body_entered" from="player_detection_area" to="." method="_on_player_detection_area_body_entered"]
+[connection signal="body_exited" from="player_detection_area" to="." method="_on_player_detection_area_body_exited"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="hit_area" to="." method="_on_hit_area_body_entered"]

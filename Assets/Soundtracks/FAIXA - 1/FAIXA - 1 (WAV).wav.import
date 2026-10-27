@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://66c3vfmkvo5m"
+path="res://.godot/imported/FAIXA - 1 (WAV).wav-49cfb2b1477597b4473b04a7dd88c1cc.sample"
+
+[deps]
+
+source_file="res://Assets/Soundtracks/FAIXA - 1/FAIXA - 1 (WAV).wav"
+dest_files=["res://.godot/imported/FAIXA - 1 (WAV).wav-49cfb2b1477597b4473b04a7dd88c1cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
